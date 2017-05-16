@@ -1,3 +1,4 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="title_separator_stoke">3dp</dimen>
 </resources>

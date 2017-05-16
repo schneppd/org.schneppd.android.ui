@@ -17,4 +17,50 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- custom style -->
+    <!-- namespace for the style -->
+    <style name="DrawnActivity" />
+    <!-- generic properties -->
+    <style name="DrawnActivity.Generic.SizeMatchParent" parent="DrawnActivity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="DrawnActivity.Generic.GuiMainSection" parent="DrawnActivity">
+        <item name="app:layout_marginTop">5dp</item>
+        <item name="app:layout_marginBottom">5dp</item>
+    </style>
+    <!-- styles for all activities title toolbar  -->
+    <style name="DrawnActivity.ToolbarActivityTitle" parent="DrawnActivity"/>
+    <!-- title upper separator  -->
+    <style name="DrawnActivity.ToolbarActivityTitle.BigSeparatorStrokes" parent="DrawnActivity.ToolbarActivityTitle">
+        <item name="android:background">@color/colorBigSeparatorStroke</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_separator_stoke</item>
+    </style>
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleUpperStroke" parent="DrawnActivity.ToolbarActivityTitle.BigSeparatorStrokes">
+    </style>
+    <!-- title content  -->
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleCenter" parent="DrawnActivity.ToolbarActivityTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleDecorationStroke" parent="DrawnActivity.ToolbarActivityTitle.TitleCenter">
+        <item name="android:background">@color/colorDecorationStrokes</item>
+        <item name="android:layout_width">35dp</item>
+    </style>
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleLeftDecorationStroke" parent="DrawnActivity.ToolbarActivityTitle.TitleDecorationStroke">
+    </style>
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleText" parent="DrawnActivity.ToolbarActivityTitle.TitleCenter">
+        <item name="app:layout_marginTop">5dp</item>
+        <item name="app:layout_marginLeft">9dp</item>
+        <item name="app:layout_marginRight">9dp</item>
+    </style>
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleRightDecorationStroke" parent="DrawnActivity.ToolbarActivityTitle.TitleDecorationStroke">
+    </style>
+    <!-- title lower separator  -->
+    <style name="DrawnActivity.ToolbarActivityTitle.TitleLowerStroke" parent="DrawnActivity.ToolbarActivityTitle.BigSeparatorStrokes">
+    </style>
+
 </resources>

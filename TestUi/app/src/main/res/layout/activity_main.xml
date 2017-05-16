@@ -7,7 +7,7 @@
     tools:context="org.schneppd.android.testui.MainActivity">
 
 
-    <include layout="@layout/scaffolding_toolbar" />
+    <include layout="@layout/activity_header_simple" />
 
     <include layout="@layout/content_main" />
 
