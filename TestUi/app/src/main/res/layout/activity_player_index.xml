@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.schneppd.android.testui.MainActivity">
+    tools:context="org.schneppd.android.testui.PlayerIndexActivity">
 
+    <include layout="@layout/activity_header_simple" />
 
-
-    <include layout="@layout/content_main" />
-
+    <include layout="@layout/content_player_index" />
 
 </android.support.design.widget.CoordinatorLayout>

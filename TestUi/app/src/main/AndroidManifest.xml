@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PlayerIndexActivity"
+            android:label="@string/title_activity_player_index"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

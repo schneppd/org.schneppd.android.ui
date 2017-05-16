@@ -2,4 +2,5 @@
     <string name="app_name">TestUi</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_sample">My sample title</string>
+    <string name="title_activity_player_index">PlayerIndexActivity</string>
 </resources>
