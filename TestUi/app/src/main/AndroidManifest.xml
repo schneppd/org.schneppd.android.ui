@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Main"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,8 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayerIndexActivity"
+            android:name="org.schneppd.android.Application.PlayerIndex"
             android:label="@string/title_activity_player_index"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="org.schneppd.android.Application.LegalULA"
+            android:label="@string/title_activity_legal_ul"
             android:theme="@style/AppTheme"></activity>
     </application>
 

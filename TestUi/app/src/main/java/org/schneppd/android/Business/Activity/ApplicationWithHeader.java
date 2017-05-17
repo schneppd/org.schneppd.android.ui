@@ -1,26 +1,29 @@
-package org.schneppd.android.testui;
+package org.schneppd.android.Business.Activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import org.schneppd.android.testui.R;
 
-public class PlayerIndexActivity extends AppCompatActivity {
+import org.schneppd.android.Framework.Activity.Application;
+
+/**
+ * Created by cdsm07 on 17/05/2017.
+ */
+
+public abstract class ApplicationWithHeader extends Application {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player_index);
+        SetupHeader();
+    }
+
+    protected void SetupHeader(){
         // set ToolbarActivityTitle as activity's actionbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.ToolbarActivityTitle);
         setSupportActionBar(toolbar);
         // remove default behaviours
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(false);
-
-
     }
-
 }

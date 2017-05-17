@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="org.schneppd.android.testui.MainActivity"
+    tools:context="org.schneppd.android.testui.Main"
     tools:showIn="@layout/activity_main">
 
     <ImageView
@@ -26,7 +26,6 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toTopOf="parent"
-        android:onClick="ExecuteStartGame"
         />
 
 </android.support.constraint.ConstraintLayout>

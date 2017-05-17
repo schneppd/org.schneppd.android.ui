@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">TestUi</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_sample">My sample title</string>
+    <string name="title_activity_sample">My sample title</string>
     <string name="title_activity_player_index">PlayerIndexActivity</string>
+    <string name="title_activity_legal_ul">Legal ULA of Doomsday 123</string>
+    <string name="large_text_content_sample">This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+    This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+        This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+        This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+        This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+        This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+        This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text This is some legal mumbo jumbo text
+    </string>
+    <string name="choice_button_text_sample">Sample button</string>
+    <string name="legal_accept_ula">Accepter</string>
+    <string name="legal_decline_ula">Refuser</string>
 </resources>
