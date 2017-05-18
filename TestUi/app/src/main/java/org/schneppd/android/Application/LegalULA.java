@@ -13,7 +13,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import org.schneppd.android.Application.PlayerIndex;
+import org.schneppd.android.Application.UpdateActivity;
+import org.schneppd.android.testui.Main;
 
 public class LegalULA extends ApplicationWithHeader {
 
@@ -33,8 +34,7 @@ public class LegalULA extends ApplicationWithHeader {
     }
 
     protected void SetupActivityTextualContent(){
-        final String legalActivityTitle = getResources().getString(R.string.title_activity_legal_ul);
-        TxtHeaderTitleText.setText(legalActivityTitle);
+        SetActivityTitle(R.string.title_activity_legal_ul);
 
         final String BtnAcceptUlaText = getResources().getString(R.string.legal_accept_ula);
         BtnAcceptUla.setText(BtnAcceptUlaText);
@@ -44,12 +44,12 @@ public class LegalULA extends ApplicationWithHeader {
 
     @OnClick(R2.id.Choice1)
     public void ExecuteAcceptULA(View v){
-        LaunchActivity(PlayerIndex.class);
+        LaunchActivity(UpdateActivity.class);
     }
 
     @OnClick(R2.id.Choice2)
     public void ExecuteDeclineULA(View v){
-        LaunchActivity(PlayerIndex.class);
+        LaunchActivity(Main.class);
     }
 
 }

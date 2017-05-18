@@ -26,6 +26,10 @@
         <activity
             android:name="org.schneppd.android.Application.LegalULA"
             android:label="@string/title_activity_legal_ul"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="org.schneppd.android.Application.UpdateActivity"
+            android:label="@string/title_activity_update"
             android:theme="@style/AppTheme"></activity>
     </application>
 
