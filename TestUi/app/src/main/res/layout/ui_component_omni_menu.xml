@@ -18,9 +18,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        />
+        app:layout_constraintRight_toLeftOf="@+id/OmniMenuBtn2"
+        app:layout_constraintVertical_bias="1.0" />
     <ImageButton
         android:id="@+id/OmniMenuBtn2"
         android:layout_width="50dp"
@@ -28,10 +27,9 @@
         app:layout_constraintLeft_toRightOf="@+id/OmniMenuBtn1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        />
+        app:layout_constraintRight_toLeftOf="@+id/OmniMenuBtn3"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1.0" />
     <ImageButton
         android:id="@+id/OmniMenuBtn3"
         android:layout_width="50dp"
@@ -39,9 +37,9 @@
         app:layout_constraintLeft_toRightOf="@+id/OmniMenuBtn2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        />
+        app:layout_constraintRight_toLeftOf="@+id/OmniMenuBtn4"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1.0" />
     <ImageButton
         android:id="@+id/OmniMenuBtn4"
         android:layout_width="50dp"
@@ -49,9 +47,9 @@
         app:layout_constraintLeft_toRightOf="@+id/OmniMenuBtn3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        />
+        app:layout_constraintRight_toLeftOf="@+id/OmniMenuBtn5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1.0" />
     <ImageButton
         android:id="@+id/OmniMenuBtn5"
         android:layout_width="50dp"
@@ -59,7 +57,7 @@
         app:layout_constraintLeft_toRightOf="@+id/OmniMenuBtn4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>
