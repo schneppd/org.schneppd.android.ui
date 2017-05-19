@@ -21,9 +21,6 @@ import org.schneppd.android.Business.Activity.ApplicationWithHeader;
 
 public class UpdateActivity extends ApplicationWithHeader {
 
-    @BindView(R2.id.UpdateInformationText)
-    TextView UpdateInformationText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setActivityView(R.layout.activity_update);
@@ -38,7 +35,7 @@ public class UpdateActivity extends ApplicationWithHeader {
 
     }
 
-    @OnClick(R2.id.UpdateInformationText)
+    @OnClick(R2.id.TempSkipUpdateButton)
     public void ExecuteGoToIndex(View v){
         LaunchActivity(PlayerIndex.class);
     }

@@ -19,4 +19,14 @@
     <string name="loading_sample">Loading some data, making a sandwitch, Nuking the moon...
     Please drink some coffee or tea and make yourself confortable.</string>
     <string name="title_activity_index">Index</string>
+    <string name="temp_update_skip_button">skip update (will disappear in production)</string>
+    <string name="index_menu_principal_button">Hom</string>
+    <string name="index_menu_second_principal_button">Jou</string>
+    <string name="index_menu_third_principal_button">Que</string>
+    <string name="index_menu_secondary_button">Ava</string>
+    <string name="index_menu_second_secondary_button">Set</string>
+
+    <string name="index_sample_background">Background</string>
+    <string name="index_sample_avatar">Avatar</string>
+    <string name="index_sample_location_button">Loc</string>
 </resources>
