@@ -1,5 +1,6 @@
 package org.schneppd.android.Application;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,11 @@ public class PlayerIndex extends ApplicationWithHeader {
 
     protected void SetupActivityTextualContent(){
         SetActivityTitle(R.string.title_activity_index);
+
+        TextView tv = (TextView) findViewById(R.id.HeaderTitleText);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/LibreBaskerville-Bold.ttf");
+        tv.setTypeface(tf);
+
 
     }
 
