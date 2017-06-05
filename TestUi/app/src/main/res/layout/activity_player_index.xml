@@ -6,15 +6,20 @@
     android:layout_height="match_parent"
     tools:context="org.schneppd.android.Application.PlayerIndex">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
+
+
         <!-- Header aligned to top -->
         <RelativeLayout
             android:id="@+id/Header"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             >
 
             <include layout="@layout/ui_component_header" />
@@ -22,34 +27,61 @@
         <!-- Footer aligned to bottom -->
         <RelativeLayout
             android:id="@+id/Footer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <include layout="@layout/ui_component_omni_menu" />
         </RelativeLayout>
         <!-- Body aligned in the middle -->
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_below="@id/Header"
-            android:layout_above="@id/Footer"
-            android:fillViewport="true"
-            >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <include layout="@layout/content_player_index" />
-            </LinearLayout>
-
-        </ScrollView>
+    <Button
+        android:id="@+id/IndexBackgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
 
-    </RelativeLayout>
+        android:layout_margin="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header"
+        app:layout_constraintBottom_toTopOf="@+id/Footer"
+
+
+        android:text="@string/index_sample_background"
+        />
+    <Button
+        android:id="@+id/IndexAvatarImage"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+
+
+        app:layout_constraintRight_toRightOf="@+id/IndexBackgroundImage"
+        app:layout_constraintLeft_toLeftOf="@+id/IndexBackgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/IndexBackgroundImage"
+        app:layout_constraintBottom_toBottomOf="@+id/IndexBackgroundImage"
+
+        android:background="@color/colorBigSeparatorStroke"
+        android:text="@string/index_sample_avatar"
+        />
+    <Button
+        android:id="@+id/ButtonTryValidateQuests"
+
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/IndexBackgroundImage"
+        app:layout_constraintRight_toRightOf="@+id/IndexBackgroundImage"
+
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@color/colorDecorationStrokes"
+        android:text="@string/index_sample_location_button"
+        />
+    </android.support.constraint.ConstraintLayout>
 
 
 

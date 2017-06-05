@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ImgQuestBoardPost"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TxtQuestBoardPostTitle"
+        app:layout_constraintLeft_toRightOf="@+id/ImgQuestBoardPost"
+        app:layout_constraintBottom_toBottomOf="@+id/ImgQuestBoardPost"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sample_quest_board_row_title"
+        android:textSize="21sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TxtQuestBoardPostWarning"
+        app:layout_constraintLeft_toLeftOf="@+id/TxtQuestBoardPostTitle"
+        app:layout_constraintBottom_toTopOf="@+id/TxtQuestBoardPostTitle"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sample_quest_board_row_title_warning"
+        android:textSize="13sp"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -48,7 +48,7 @@ public class PlayerIndex extends ApplicationWithHeader {
 
     @OnClick(R2.id.OmniMenuBtnSecondMostImportant)
     public void ActionNavigationGoToQuestBoard(View v){
-        LaunchActivity(UpdateActivity.class);
+        LaunchActivity(QuestBoardActivity.class);
     }
 
     @OnClick(R2.id.OmniMenuBtnThirdMostImportant)

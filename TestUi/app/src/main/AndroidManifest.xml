@@ -26,15 +26,21 @@
         <activity
             android:name="org.schneppd.android.Application.LegalULA"
             android:label="@string/title_activity_legal_ul"
-            android:theme="@style/AppTheme"
             android:noHistory="true"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="org.schneppd.android.Application.UpdateActivity"
             android:label="@string/title_activity_update"
-            android:theme="@style/AppTheme"
             android:noHistory="true"
-            ></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name="org.schneppd.android.Application.QuestBoardActivity" />
+        <activity android:name="org.schneppd.android.Application.QuestProposalActivity" />
+        <activity android:name="org.schneppd.android.Application.TrophyShowcaseActivity" />
+        <activity android:name="org.schneppd.android.Application.TrophyActivity" />
+        <activity android:name="org.schneppd.android.Application.QuestJournalActivity" />
+        <activity android:name="org.schneppd.android.Application.QuestHistoryActivity" />
+        <activity android:name="org.schneppd.android.Application.AvatarCustomizationActivity" />
+        <activity android:name="org.schneppd.android.Application.SetupActivity"></activity>
     </application>
 
 </manifest>

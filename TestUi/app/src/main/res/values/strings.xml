@@ -29,4 +29,21 @@
     <string name="index_sample_background">Background</string>
     <string name="index_sample_avatar">Avatar</string>
     <string name="index_sample_location_button">Loc</string>
+
+    <string name="title_activity_quest_board">Quest Board</string>
+    <string name="title_activity_quest_proposal">Quest Proposal placeholder</string>
+    <string name="title_activity_quest_journal">Quest Journal</string>
+    <string name="title_activity_quest_history">Quest history placeholder</string>
+
+    <string name="title_activity_setup">Settings</string>
+    <string name="title_activity_trophy_showcase">Trophy showcase</string>
+    <string name="title_activity_trophy">Trophy title placeholder</string>
+
+    <string name="title_activity_avatar_customization">Avatar customization</string>
+    <string name="sample_quest_board_row_title">Sample quest title</string>
+    <string name="sample_quest_board_row_title_warning">The quest will be gone on 06/06/2017 17:45</string>
+    <string name="sentence_quest_post_expiration_warning">The quest will expire at </string>
+
+
+
 </resources>
