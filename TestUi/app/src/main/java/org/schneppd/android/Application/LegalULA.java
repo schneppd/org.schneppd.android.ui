@@ -2,6 +2,7 @@ package org.schneppd.android.Application;
 
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class LegalULA extends ApplicationWithHeader {
     Button BtnAcceptUla;
     @BindView(R2.id.Choice2)
     Button BtnDeclineUla;
+    @BindView(R2.id.wvTermsOfServices)
+    WebView wvTermsOfServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,8 @@ public class LegalULA extends ApplicationWithHeader {
         BtnAcceptUla.setText(BtnAcceptUlaText);
         final String BtnDeclineUlaText = getResources().getString(R.string.legal_decline_ula);
         BtnDeclineUla.setText(BtnDeclineUlaText);
+
+        wvTermsOfServices.loadUrl("file:///android_asset/html/terms-services.html");
     }
 
     @OnClick(R2.id.Choice1)
