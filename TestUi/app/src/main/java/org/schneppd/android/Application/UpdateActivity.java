@@ -23,9 +23,9 @@ public class UpdateActivity extends ApplicationWithHeader {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setActivityView(R.layout.activity_update);
+
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
+        setContentView(R.layout.activity_update);
         SetupActivityTextualContent();
 
     }
@@ -35,7 +35,6 @@ public class UpdateActivity extends ApplicationWithHeader {
 
     }
 
-    @OnClick(R2.id.TempSkipUpdateButton)
     public void ExecuteGoToIndex(View v){
         LaunchActivity(PlayerIndex.class);
     }

@@ -17,42 +17,49 @@ import butterknife.OnClick;
 import org.schneppd.android.Application.UpdateActivity;
 import org.schneppd.android.testui.Main;
 
-public class LegalULA extends ApplicationWithHeader {
-
-    @BindView(R2.id.HeaderTitleText)
-    TextView TxtHeaderTitleText;
-    @BindView(R2.id.Choice1)
-    Button BtnAcceptUla;
-    @BindView(R2.id.Choice2)
-    Button BtnDeclineUla;
-    @BindView(R2.id.wvTermsOfServices)
-    WebView wvTermsOfServices;
+public class LegalULA extends ApplicationWithHeader implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setActivityView(R.layout.activity_legal_ula);
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
+        setContentView(R.layout.activity_legal_ula);
+
+        Button BtnAcceptCondition = (Button) findViewById(R.id.Choice1);
+        Button BtnDeclineCondition = (Button) findViewById(R.id.Choice2);
+        BtnAcceptCondition.setOnClickListener(this);
+        BtnDeclineCondition.setOnClickListener(this);
+
         SetupActivityTextualContent();
+    }
+
+    @Override
+    public void onClick(View v) {
+        // handle all click events of this activity
+        switch (v.getId()) {
+            case R.id.Choice1: ExecuteAcceptULA(v); break;
+            case R.id.Choice2: ExecuteDeclineULA(v); break;
+        }
     }
 
     protected void SetupActivityTextualContent(){
         SetActivityTitle(R.string.title_activity_legal_ul);
 
-        final String BtnAcceptUlaText = getResources().getString(R.string.legal_accept_ula);
-        BtnAcceptUla.setText(BtnAcceptUlaText);
-        final String BtnDeclineUlaText = getResources().getString(R.string.legal_decline_ula);
-        BtnDeclineUla.setText(BtnDeclineUlaText);
+        Button BtnAcceptCondition = (Button) findViewById(R.id.Choice1);
+        Button BtnDeclineCondition = (Button) findViewById(R.id.Choice2);
 
+        final String BtnAcceptUlaText = getResources().getString(R.string.legal_accept_ula);
+        BtnAcceptCondition.setText(BtnAcceptUlaText);
+        final String BtnDeclineUlaText = getResources().getString(R.string.legal_decline_ula);
+        BtnDeclineCondition.setText(BtnDeclineUlaText);
+
+        WebView wvTermsOfServices = (WebView) findViewById(R.id.wvTermsOfServices);
         wvTermsOfServices.loadUrl("file:///android_asset/html/terms-services.html");
     }
 
-    @OnClick(R2.id.Choice1)
     public void ExecuteAcceptULA(View v){
         LaunchActivity(UpdateActivity.class);
     }
 
-    @OnClick(R2.id.Choice2)
     public void ExecuteDeclineULA(View v){
         LaunchActivity(Main.class);
     }

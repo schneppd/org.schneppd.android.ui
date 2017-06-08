@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Button;
 
-import org.schneppd.android.Business.Activity.ApplicationWithHeader;
+import org.schneppd.android.Business.Activity.ApplicationWithHeaderAndOmniMenu;
 import org.schneppd.android.testui.R;
 import org.schneppd.android.Model.QuestPost;
 import org.schneppd.android.Adapter.QuestPostAdapter;
@@ -25,7 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 //http://www.androidhive.info/2016/01/android-working-with-recycler-view/
-public class QuestBoardActivity extends ApplicationWithHeader {
+public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
 
     /*
     @BindView(R2.id.rvQuestBoard)
@@ -40,18 +41,20 @@ public class QuestBoardActivity extends ApplicationWithHeader {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quest_board);
 
-        ButterKnife.bind(this);
+
+
         SetupActivityTextualContent();
 
-        /*
+
         questPostsAdapter = new QuestPostAdapter(questPosts);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView rvQuestBoard = (RecyclerView) findViewById(R.id.rvQuestBoard);;
         rvQuestBoard.setLayoutManager(mLayoutManager);
         rvQuestBoard.setItemAnimator(new DefaultItemAnimator());
         rvQuestBoard.setAdapter(questPostsAdapter);
 
         PrepareQuestBoard();
-        */
+
     }
 
     protected void SetupActivityTextualContent(){
@@ -85,5 +88,26 @@ public class QuestBoardActivity extends ApplicationWithHeader {
         questPosts.add(qp);
 
         questPostsAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void ClickOmniMenuBtnMostImportant(View v){
+        LaunchActivity(UpdateActivity.class);
+    }
+
+    @Override
+    public void ClickOmniMenuBtnSecondMostImportant(View v){ LaunchActivity(QuestBoardActivity.class); }
+
+    @Override
+    public void ClickOmniMenuBtnThirdMostImportant(View v){
+        LaunchActivity(UpdateActivity.class);
+    }
+
+    @Override
+    public void ClickOmniMenuBtnSecondLessImportant(View v){ LaunchActivity(UpdateActivity.class); }
+
+    @Override
+    public void ClickOmniMenuBtnThirdLessImportant(View v){
+        LaunchActivity(UpdateActivity.class);
     }
 }

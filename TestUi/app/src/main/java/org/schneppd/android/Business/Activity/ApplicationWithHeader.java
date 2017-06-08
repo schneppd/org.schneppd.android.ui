@@ -1,7 +1,9 @@
 package org.schneppd.android.Business.Activity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import org.schneppd.android.testui.R;
@@ -17,16 +19,14 @@ import butterknife.BindView;
 
 public abstract class ApplicationWithHeader extends Application {
 
-    @BindView(R2.id.HeaderTitleText)
-    protected TextView TxtHeaderTitleText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SetupHeader();
     }
 
-    protected void SetupHeader(){
+    @Override
+    public void setContentView(View v){
+        super.setContentView(v);
         // set ToolbarActivityTitle as activity's actionbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.ToolbarActivityTitle);
         setSupportActionBar(toolbar);
@@ -35,8 +35,13 @@ public abstract class ApplicationWithHeader extends Application {
         getSupportActionBar().setDisplayShowHomeEnabled(false);
     }
 
+
     protected void SetActivityTitle(final int ressourceId){
         final String legalActivityTitle = getResources().getString(ressourceId);
+        TextView TxtHeaderTitleText = (TextView) findViewById(R.id.tvHeaderTitle);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/LibreBaskerville-Bold.ttf");
+        TxtHeaderTitleText.setTypeface(tf);
+
         TxtHeaderTitleText.setText(legalActivityTitle);
     }
 

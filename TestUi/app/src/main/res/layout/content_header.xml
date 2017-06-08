@@ -26,7 +26,7 @@
             >
 
             <TextView
-                android:id="@+id/HeaderTitleText"
+                android:id="@+id/tvHeaderTitle"
                 android:text="@string/title_activity_sample"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
