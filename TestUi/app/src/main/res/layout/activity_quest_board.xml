@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="org.schneppd.android.Application.QuestBoardActivity">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -37,6 +37,7 @@
             <include layout="@layout/ui_component_omni_menu" />
         </RelativeLayout>
         <!-- Body aligned in the middle -->
+        <!--
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvQuestBoard"
             android:scrollbars="vertical"
@@ -48,6 +49,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Header"
             app:layout_constraintBottom_toTopOf="@+id/Footer"
             />
+            -->
 
 
 

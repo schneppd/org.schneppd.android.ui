@@ -27,10 +27,13 @@ import butterknife.OnClick;
 //http://www.androidhive.info/2016/01/android-working-with-recycler-view/
 public class QuestBoardActivity extends ApplicationWithHeader {
 
+    /*
     @BindView(R2.id.rvQuestBoard)
     RecyclerView rvQuestBoard;
+    */
     private List<QuestPost> questPosts = new ArrayList<>();
     private QuestPostAdapter questPostsAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class QuestBoardActivity extends ApplicationWithHeader {
         ButterKnife.bind(this);
         SetupActivityTextualContent();
 
+        /*
         questPostsAdapter = new QuestPostAdapter(questPosts);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         rvQuestBoard.setLayoutManager(mLayoutManager);
@@ -47,6 +51,7 @@ public class QuestBoardActivity extends ApplicationWithHeader {
         rvQuestBoard.setAdapter(questPostsAdapter);
 
         PrepareQuestBoard();
+        */
     }
 
     protected void SetupActivityTextualContent(){

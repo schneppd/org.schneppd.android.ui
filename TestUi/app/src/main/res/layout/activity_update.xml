@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="org.schneppd.android.Application.UpdateActivity"
-    >
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:id="@+id/LegalHeader"
-    android:layout_marginBottom="9dp"
-    >
-    <include layout="@layout/ui_component_header" />
-</LinearLayout>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@id/LegalHeader"
-    android:layout_above="@id/LegalChoice"
+    tools:context="org.schneppd.android.Application.UpdateActivity">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        >
+        <include layout="@layout/content_header" />
 
-    >
-    <include layout="@layout/content_update" />
-</LinearLayout>
-</RelativeLayout>
+        <ProgressBar
+            android:id="@+id/UpdateProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Header"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/loading_sample"
+            android:id="@+id/UpdateInformationText"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UpdateProgress"
+            app:layout_constraintBottom_toTopOf="@+id/TempSkipUpdateButton"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/TempSkipUpdateButton"
+            android:text="@string/temp_update_skip_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
