@@ -70,7 +70,7 @@ public class QuestJournalActivity extends ApplicationWithHeader implements IRecy
 
         Bundle b = new Bundle();
         b.putInt("id", id);
-        LaunchActivityWithParams(QuestProposalActivity.class, b);
+        LaunchActivityWithParams(QuestHistoryActivity.class, b);
 
         //Toast.makeText(getApplicationContext(), qp.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
     }

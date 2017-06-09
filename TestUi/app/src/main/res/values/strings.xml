@@ -56,6 +56,9 @@
     <string name="title_quest_journal_activity">Quest journal</string>
     <string name="label_quest_journal_list_title">Your finished quests:</string>
 
+    <string name="sample_quest_event_title">09/06/2017 whent to the castle X</string>
+    <string name="label_quest_journal_event">All events</string>
+
 
 
 </resources>
