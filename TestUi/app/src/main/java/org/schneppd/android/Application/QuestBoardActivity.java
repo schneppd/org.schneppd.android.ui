@@ -13,7 +13,7 @@ import org.schneppd.android.testui.R;
 import org.schneppd.android.Model.QuestPost;
 import org.schneppd.android.Adapter.QuestPostAdapter;
 
-import org.schneppd.android.testui.R2;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,17 +21,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import org.schneppd.android.ItemDecoration.RecyclerViewDividerItemDecoration;
 
 //http://www.androidhive.info/2016/01/android-working-with-recycler-view/
 public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
 
-    /*
-    @BindView(R2.id.rvQuestBoard)
-    RecyclerView rvQuestBoard;
-    */
     private List<QuestPost> questPosts = new ArrayList<>();
     private QuestPostAdapter questPostsAdapter;
 
@@ -51,6 +45,7 @@ public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
         RecyclerView rvQuestBoard = (RecyclerView) findViewById(R.id.rvQuestBoard);;
         rvQuestBoard.setLayoutManager(mLayoutManager);
         rvQuestBoard.setItemAnimator(new DefaultItemAnimator());
+        rvQuestBoard.addItemDecoration(new RecyclerViewDividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         rvQuestBoard.setAdapter(questPostsAdapter);
 
         PrepareQuestBoard();
