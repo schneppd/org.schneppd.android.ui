@@ -64,7 +64,7 @@ public class QuestBoardActivity extends ApplicationWithHeader implements IRecycl
         SimpleDateFormat questTimeParser = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         Date expiration = new Date();
 
-        QuestPost qp = new QuestPost("epic quest 1");
+        QuestPost qp = new QuestPost(1, "epic quest 1");
         questPosts.add(qp);
 
         try {
@@ -73,7 +73,7 @@ public class QuestBoardActivity extends ApplicationWithHeader implements IRecycl
         catch (ParseException e){
             // log e
         }
-        qp = new QuestPost("epic quest 2", expiration);
+        qp = new QuestPost(2, "epic quest 2", expiration);
         questPosts.add(qp);
 
         try {
@@ -82,7 +82,7 @@ public class QuestBoardActivity extends ApplicationWithHeader implements IRecycl
         catch (ParseException e){
             // log e
         }
-        qp = new QuestPost("epic quest 3", expiration);
+        qp = new QuestPost(3, "epic quest 3", expiration);
         questPosts.add(qp);
 
         questPostsAdapter.notifyDataSetChanged();
@@ -92,7 +92,13 @@ public class QuestBoardActivity extends ApplicationWithHeader implements IRecycl
     @Override
     public void onClick(View view, int position) {
         QuestPost qp = questPosts.get(position);
-        Toast.makeText(getApplicationContext(), qp.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
+        int id_quest_post = qp.getId();
+
+        Bundle b = new Bundle();
+        b.putInt("id_quest_post", id_quest_post);
+        LaunchActivityWithParams(QuestProposalActivity.class, b);
+
+        //Toast.makeText(getApplicationContext(), qp.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
     }
 
     @Override

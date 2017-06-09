@@ -4,17 +4,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by schneppd on 6/5/17.
+ * Created by schneppd on 6/9/17.
  */
 
-public class QuestPost {
+public class QuestPostDetails {
     private int id_quest_post;
     private String title;
     private Date creation;
     private Date expiration;
     private String expirationWarning;
 
-    public QuestPost(){
+    public static QuestPostDetails RestorModelInformations(int id){
+        Date expiration = new Date();
+        QuestPostDetails result = new QuestPostDetails(id, "An epic quest title", expiration);
+        return result;
+
+    }
+
+    public QuestPostDetails(){
         this.id_quest_post = 0;
         this.setTitle("Placeholder");
         this.setCreation(new Date());
@@ -22,14 +29,14 @@ public class QuestPost {
         this.setExpirationWarning("Placeholder warning");
     }
 
-    public QuestPost(int idQuestPost, String title){
+    public QuestPostDetails(int idQuestPost, String title){
         this.id_quest_post = idQuestPost;
         this.setTitle(title);
         this.setCreation(new Date());
         this.setExpiration(new Date());
     }
 
-    public QuestPost(int idQuestPost, String title, Date expiration){
+    public QuestPostDetails(int idQuestPost, String title, Date expiration){
         this.id_quest_post = idQuestPost;
         this.setTitle(title);
         this.setCreation(new Date());
@@ -80,6 +87,4 @@ public class QuestPost {
     public int getId() {
         return id_quest_post;
     }
-
-
 }

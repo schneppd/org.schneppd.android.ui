@@ -45,6 +45,14 @@ public abstract class ApplicationWithHeader extends Application {
         TxtHeaderTitleText.setText(legalActivityTitle);
     }
 
+    protected void SetActivityTitle(final String title){
+        TextView TxtHeaderTitleText = (TextView) findViewById(R.id.tvHeaderTitle);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/LibreBaskerville-Bold.ttf");
+        TxtHeaderTitleText.setTypeface(tf);
+
+        TxtHeaderTitleText.setText(title);
+    }
+
     // used to init the content of the activity
     protected abstract void SetupActivityTextualContent();
 }

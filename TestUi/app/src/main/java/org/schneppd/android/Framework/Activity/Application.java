@@ -24,5 +24,11 @@ public abstract class Application extends AppCompatActivity {
         startActivity(i);
     }
 
+    protected void LaunchActivityWithParams(Class<?> activity, Bundle b){
+        Intent i = new Intent(getBaseContext(), activity);
+        i.putExtras(b);
+        startActivity(i);
+    }
+
 
 }

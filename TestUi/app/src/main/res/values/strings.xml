@@ -44,6 +44,18 @@
     <string name="sample_quest_board_row_title_warning">The quest will be gone on 06/06/2017 17:45</string>
     <string name="sentence_quest_post_expiration_warning">The quest will expire at </string>
 
+    <string name="label_quest_board_list_title">Quests available:</string>
+    <string name="label_quest_board_list_update_date">(updated the 01/01/2111)</string>
+
+    <string name="label_description_quest_proposal">Description: </string>
+    <string name="placeholder_warning_quest_proposal">This quest will expire the 01/01/2222</string>
+    <string name="txt_description_quest_proposal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla imperdiet mi eu malesuada. Donec et consequat leo, id porta neque. Maecenas suscipit, arcu eu consequat blandit, arcu dolor consequat erat, ac iaculis ante enim et mi. Quisque sapien nisl, ultricies quis volutpat ac, gravida at metus. Nullam quis tincidunt eros. Mauris a risus non justo venenatis mattis. Vivamus ullamcorper convallis libero, sed rhoncus leo. Donec blandit turpis enim, ac fringilla lorem suscipit et. In nec eros ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur scelerisque sollicitudin cursus. Nullam fringilla efficitur lectus, in viverra tellus facilisis eu. Nam commodo neque ut nibh tincidunt sagittis. Proin bibendum ex sed elit ullamcorper, mollis gravida nunc placerat.</string>
+    <string name="label_steps_quest_proposal">Locations to explore:</string>
+    <string name="placeholder_quest_proposal_step_location">A placeholder location</string>
+
+    <string name="title_quest_journal_activity">Quest journal</string>
+    <string name="label_quest_journal_list_title">Your finished quests:</string>
+
 
 
 </resources>

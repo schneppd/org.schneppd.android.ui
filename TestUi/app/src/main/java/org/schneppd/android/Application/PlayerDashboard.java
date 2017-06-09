@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import org.schneppd.android.Business.Activity.ApplicationWithHeader;
 import org.schneppd.android.testui.R;
@@ -53,13 +54,13 @@ public class PlayerDashboard extends ApplicationWithHeader implements View.OnCli
 
 
     public void Click_ibtnRecordPosition(View v){
-        LaunchActivity(UpdateActivity.class);
+        Toast.makeText(getApplicationContext(), "Sorry but your position doesn't validate any quests", Toast.LENGTH_SHORT).show();
     }
 
     public void Click_ibtnQuestBoard(View v){ LaunchActivity(QuestBoardActivity.class); }
 
     public void Click_ibtnQuestJournal(View v){
-        LaunchActivity(UpdateActivity.class);
+        LaunchActivity(QuestJournalActivity.class);
     }
 
     public void Click_ibtnTrophy(View v){ LaunchActivity(UpdateActivity.class); }
@@ -67,9 +68,6 @@ public class PlayerDashboard extends ApplicationWithHeader implements View.OnCli
     public void Click_ibtnSettings(View v){
         LaunchActivity(UpdateActivity.class);
     }
-
-
-    public void ActionNavigationGoToChangeIndexBackground(View v){ LaunchActivity(UpdateActivity.class); }
 
 
     public void ActionNavigationGoToChangeAvatar(View v){
