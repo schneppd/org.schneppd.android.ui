@@ -75,6 +75,6 @@ public class PlayerDashboard extends ApplicationWithHeader implements View.OnCli
     public void ActionNavigationGoToChangeAvatar(View v){
         LaunchActivity(UpdateActivity.class);
     }
-    
+
 
 }

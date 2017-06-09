@@ -1,4 +1,4 @@
-package org.schneppd.android.Adapter;
+package org.schneppd.android.RecyclerViewUtils.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

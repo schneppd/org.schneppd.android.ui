@@ -12,7 +12,7 @@ import org.schneppd.android.RecyclerViewUtils.IRecyclerViewClickListener;
 import org.schneppd.android.RecyclerViewUtils.RecyclerViewTouchListener;
 import org.schneppd.android.testui.R;
 import org.schneppd.android.Model.QuestPost;
-import org.schneppd.android.Adapter.QuestPostAdapter;
+import org.schneppd.android.RecyclerViewUtils.Adapter.QuestPostAdapter;
 
 
 

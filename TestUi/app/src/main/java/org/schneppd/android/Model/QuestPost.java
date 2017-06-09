@@ -1,5 +1,6 @@
 package org.schneppd.android.Model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -29,7 +30,8 @@ public class QuestPost {
         this.setTitle(title);
         this.setCreation(new Date());
         this.setExpiration(expiration);
-        this.setExpirationWarning("Placeholder warning");
+        SimpleDateFormat timeParser = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        this.setExpirationWarning("Will expire the " + timeParser.format(expiration));
     }
 
 
