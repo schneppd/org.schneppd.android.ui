@@ -1,4 +1,4 @@
-package org.schneppd.android.ItemDecoration;
+package org.schneppd.android.RecyclerViewUtils;
 
 
 import android.content.Context;

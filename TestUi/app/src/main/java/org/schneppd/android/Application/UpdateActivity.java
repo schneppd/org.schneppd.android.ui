@@ -36,7 +36,7 @@ public class UpdateActivity extends ApplicationWithHeader {
     }
 
     public void ExecuteGoToIndex(View v){
-        LaunchActivity(PlayerIndex.class);
+        LaunchActivity(PlayerDashboard.class);
     }
 
 }

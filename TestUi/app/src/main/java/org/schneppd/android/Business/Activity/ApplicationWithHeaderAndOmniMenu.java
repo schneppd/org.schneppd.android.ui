@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import org.schneppd.android.Business.Activity.ApplicationWithHeader;
 import org.schneppd.android.testui.R;
 
 /**
@@ -24,10 +23,10 @@ public abstract class ApplicationWithHeaderAndOmniMenu extends ApplicationWithHe
 
     protected void SyncEventsWithUI(){
         Button OmniMenuBtnMostImportant = (Button) findViewById(R.id.OmniMenuBtnMostImportant);
-        Button OmniMenuBtnSecondMostImportant = (Button) findViewById(R.id.OmniMenuBtnSecondMostImportant);
-        Button OmniMenuBtnThirdMostImportant = (Button) findViewById(R.id.OmniMenuBtnThirdMostImportant);
-        Button OmniMenuBtnSecondLessImportant = (Button) findViewById(R.id.OmniMenuBtnSecondLessImportant);
-        Button OmniMenuBtnThirdLessImportant = (Button) findViewById(R.id.OmniMenuBtnThirdLessImportant);
+        Button OmniMenuBtnSecondMostImportant = (Button) findViewById(R.id.ibtnQuestBoard);
+        Button OmniMenuBtnThirdMostImportant = (Button) findViewById(R.id.ibtnQuestJournal);
+        Button OmniMenuBtnSecondLessImportant = (Button) findViewById(R.id.ibtnTrophy);
+        Button OmniMenuBtnThirdLessImportant = (Button) findViewById(R.id.ibtnSettings);
 
         OmniMenuBtnMostImportant.setOnClickListener(this);
         OmniMenuBtnSecondMostImportant.setOnClickListener(this);
@@ -41,10 +40,10 @@ public abstract class ApplicationWithHeaderAndOmniMenu extends ApplicationWithHe
         // handle all click events of this activity
         switch (v.getId()) {
             case R.id.OmniMenuBtnMostImportant: ClickOmniMenuBtnMostImportant(v); break;
-            case R.id.OmniMenuBtnSecondMostImportant: ClickOmniMenuBtnSecondMostImportant(v); break;
-            case R.id.OmniMenuBtnThirdMostImportant: ClickOmniMenuBtnThirdMostImportant(v); break;
-            case R.id.OmniMenuBtnSecondLessImportant: ClickOmniMenuBtnSecondLessImportant(v); break;
-            case R.id.OmniMenuBtnThirdLessImportant: ClickOmniMenuBtnThirdLessImportant(v); break;
+            case R.id.ibtnQuestBoard: ClickOmniMenuBtnSecondMostImportant(v); break;
+            case R.id.ibtnQuestJournal: ClickOmniMenuBtnThirdMostImportant(v); break;
+            case R.id.ibtnTrophy: ClickOmniMenuBtnSecondLessImportant(v); break;
+            case R.id.ibtnSettings: ClickOmniMenuBtnThirdLessImportant(v); break;
         }
     }
 

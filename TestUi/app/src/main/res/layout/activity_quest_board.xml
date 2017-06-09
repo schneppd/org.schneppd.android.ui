@@ -14,9 +14,6 @@
         <!-- Header aligned to top -->
         <include layout="@layout/content_header" />
 
-        <!-- Footer aligned to bottom -->
-        <include layout="@layout/content_omni_menu" />
-
         <!-- Body aligned in the middle -->
 
         <android.support.v7.widget.RecyclerView
@@ -28,7 +25,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Header"
-            app:layout_constraintBottom_toTopOf="@+id/OmniMenu"
+            app:layout_constraintBottom_toBottomOf="parent"
 
             android:padding="9dp"
             />

@@ -4,12 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.schneppd.android.Model.QuestPost;
 import org.schneppd.android.testui.R;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -21,11 +21,13 @@ public class QuestPostAdapter extends RecyclerView.Adapter<QuestPostAdapter.Ques
 
     public class QuestPostViewHolder extends RecyclerView.ViewHolder {
         public TextView title, warning;
+        public ImageView icon;
 
         public QuestPostViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.TxtQuestBoardPostTitle);
             warning = (TextView) view.findViewById(R.id.TxtQuestBoardPostWarning);
+            icon = (ImageView) view.findViewById(R.id.ImgQuestBoardPost);
         }
     }
 
@@ -49,6 +51,9 @@ public class QuestPostAdapter extends RecyclerView.Adapter<QuestPostAdapter.Ques
         if(post.HasExpirationDate()){
             holder.warning.setText(post.getExpirationWarning());
         }
+        else
+            holder.warning.setVisibility(View.GONE);
+        holder.icon.setImageResource(R.drawable.ic_quest_board_1);
 
     }
 

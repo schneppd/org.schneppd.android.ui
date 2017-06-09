@@ -7,7 +7,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import org.schneppd.android.Application.LegalULA;
-import org.schneppd.android.Application.PlayerIndex;
+import org.schneppd.android.Application.PlayerDashboard;
 import org.schneppd.android.Business.Activity.ApplicationSplashScreen;
 import org.schneppd.android.Framework.Activity.Application;
 

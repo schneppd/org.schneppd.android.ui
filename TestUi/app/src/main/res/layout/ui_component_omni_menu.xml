@@ -31,7 +31,7 @@
         -->
 
     <Button
-        android:id="@+id/OmniMenuBtnSecondMostImportant"
+        android:id="@+id/ibtnQuestBoard"
         android:layout_width="55dp"
         android:layout_height="55dp"
 
@@ -44,19 +44,19 @@
         android:text="@string/index_menu_second_principal_button"
         />
     <Button
-        android:id="@+id/OmniMenuBtnThirdMostImportant"
+        android:id="@+id/ibtnQuestJournal"
         android:layout_width="55dp"
         android:layout_height="55dp"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/OmniMenuBtnSecondMostImportant"
+        app:layout_constraintLeft_toRightOf="@id/ibtnQuestBoard"
 
         android:layout_marginLeft="9dp"
         android:text="@string/index_menu_third_principal_button"
         />
     <Button
-        android:id="@+id/OmniMenuBtnSecondLessImportant"
+        android:id="@+id/ibtnTrophy"
         android:layout_width="55dp"
         android:layout_height="55dp"
 
@@ -68,13 +68,13 @@
         android:text="@string/index_menu_secondary_button"
         />
     <Button
-        android:id="@+id/OmniMenuBtnThirdLessImportant"
+        android:id="@+id/ibtnSettings"
         android:layout_width="55dp"
         android:layout_height="55dp"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/OmniMenuBtnSecondLessImportant"
+        app:layout_constraintRight_toLeftOf="@id/ibtnTrophy"
 
         android:layout_marginRight="9dp"
         android:text="@string/index_menu_second_secondary_button"

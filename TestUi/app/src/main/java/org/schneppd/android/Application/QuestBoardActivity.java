@@ -1,14 +1,15 @@
 package org.schneppd.android.Application;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
-import org.schneppd.android.Business.Activity.ApplicationWithHeaderAndOmniMenu;
+import org.schneppd.android.Business.Activity.ApplicationWithHeader;
+import org.schneppd.android.RecyclerViewUtils.IRecyclerViewClickListener;
+import org.schneppd.android.RecyclerViewUtils.RecyclerViewTouchListener;
 import org.schneppd.android.testui.R;
 import org.schneppd.android.Model.QuestPost;
 import org.schneppd.android.Adapter.QuestPostAdapter;
@@ -21,10 +22,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.schneppd.android.ItemDecoration.RecyclerViewDividerItemDecoration;
+import org.schneppd.android.RecyclerViewUtils.RecyclerViewDividerItemDecoration;
 
 //http://www.androidhive.info/2016/01/android-working-with-recycler-view/
-public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
+public class QuestBoardActivity extends ApplicationWithHeader implements IRecyclerViewClickListener {
 
     private List<QuestPost> questPosts = new ArrayList<>();
     private QuestPostAdapter questPostsAdapter;
@@ -49,6 +50,8 @@ public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
         rvQuestBoard.setAdapter(questPostsAdapter);
 
         PrepareQuestBoard();
+
+        rvQuestBoard.addOnItemTouchListener(new RecyclerViewTouchListener(getApplicationContext(), rvQuestBoard, this));
 
     }
 
@@ -85,24 +88,15 @@ public class QuestBoardActivity extends ApplicationWithHeaderAndOmniMenu {
         questPostsAdapter.notifyDataSetChanged();
     }
 
+    //manages click on the RecyclerView's items
     @Override
-    public void ClickOmniMenuBtnMostImportant(View v){
-        LaunchActivity(UpdateActivity.class);
+    public void onClick(View view, int position) {
+        QuestPost qp = questPosts.get(position);
+        Toast.makeText(getApplicationContext(), qp.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void ClickOmniMenuBtnSecondMostImportant(View v){ LaunchActivity(QuestBoardActivity.class); }
+    public void onLongClick(View view, int position) {
 
-    @Override
-    public void ClickOmniMenuBtnThirdMostImportant(View v){
-        LaunchActivity(UpdateActivity.class);
-    }
-
-    @Override
-    public void ClickOmniMenuBtnSecondLessImportant(View v){ LaunchActivity(UpdateActivity.class); }
-
-    @Override
-    public void ClickOmniMenuBtnThirdLessImportant(View v){
-        LaunchActivity(UpdateActivity.class);
     }
 }

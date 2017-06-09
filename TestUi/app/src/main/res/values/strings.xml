@@ -18,7 +18,7 @@
     <string name="title_activity_update">UpdateActivity</string>
     <string name="loading_sample">Loading some data, making a sandwitch, Nuking the moon...
     Please drink some coffee or tea and make yourself confortable.</string>
-    <string name="title_activity_index">Index</string>
+    <string name="title_activity_index">Dashboard</string>
     <string name="temp_update_skip_button">skip update (will disappear in production)</string>
     <string name="index_menu_principal_button">Hom</string>
     <string name="index_menu_second_principal_button">Jou</string>
