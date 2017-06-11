@@ -69,4 +69,16 @@ public class Trophy {
     public void setId(int id) {
         this.id = id;
     }
+
+    static public Trophy RestorModelInformations(int id){
+        Trophy dt = new Trophy(id, "Trophy n*1", (short)100);
+        QuestPost r = new QuestPost(1, "Requirement 1");
+        dt.addRequirement(r);
+        r = new QuestPost(2, "Requirement 2");
+        dt.addRequirement(r);
+        r = new QuestPost(3, "Requirement 3");
+        dt.addRequirement(r);
+        return dt;
+    }
+
 }
