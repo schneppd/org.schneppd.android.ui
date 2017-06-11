@@ -63,10 +63,10 @@ public class PlayerDashboard extends ApplicationWithHeader implements View.OnCli
         LaunchActivity(QuestJournalActivity.class);
     }
 
-    public void Click_ibtnTrophy(View v){ LaunchActivity(UpdateActivity.class); }
+    public void Click_ibtnTrophy(View v){ LaunchActivity(TrophyShowcaseActivity.class); }
 
     public void Click_ibtnSettings(View v){
-        LaunchActivity(UpdateActivity.class);
+        LaunchActivity(SetupActivity.class);
     }
 
 
