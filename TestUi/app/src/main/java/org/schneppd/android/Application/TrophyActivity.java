@@ -36,7 +36,7 @@ public class TrophyActivity extends ApplicationWithHeader {
         rv.setAdapter(adapter);
 
         adapter.notifyDataSetChanged();
-        
+
 
     }
 

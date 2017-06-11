@@ -67,10 +67,11 @@
     <string name="label_trophy_requirements">Requirements:</string>
 
     <string name="title_settings">Settings</string>
-    <string name="label_settings_hand">Hand:</string>
+    <string name="label_settings_hand">Hand orientation:</string>
+    <string name="sample_value_hand_orientation">Left</string>
     <string name="label_settings_social_media">Social media accounts:</string>
-    <string name="label_settings_facebook">Facebook:</string>
-    <string name="label_settings_tweeter">Tweeter:</string>
+    <string name="label_settings_facebook">Facebook account</string>
+    <string name="label_settings_tweeter">Tweeter account</string>
 
     <string name="title_custom_avatar">Avatar</string>
     <string name="label_custom_avatar_gender">Gender:</string>
