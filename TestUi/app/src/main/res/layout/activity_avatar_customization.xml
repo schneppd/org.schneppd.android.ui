@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="org.schneppd.android.Application.AvatarCustomizationActivity"
+    >
+<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.schneppd.android.Application.AvatarCustomizationActivity">
+    >
+    <!-- Header aligned to top -->
+    <include layout="@layout/content_header" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tvLabelGender"
+        android:text="@string/label_custom_avatar_gender"
+
+        app:layout_constraintTop_toBottomOf="@+id/Header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+
+        android:textSize="19sp"
+        android:textStyle="bold"
+        />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:id="@+id/ibFemale"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelGender"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+
+        app:srcCompat="@drawable/ic_pregnant_woman_black_24dp"
+        />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:id="@+id/ibMale"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelGender"
+        app:layout_constraintLeft_toRightOf="@+id/ibFemale"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+
+        app:srcCompat="@drawable/ic_directions_walk_black_24dp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tvLabelPicture"
+        android:text="@string/label_custom_avatar_picture"
+
+        app:layout_constraintTop_toBottomOf="@+id/ibFemale"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+
+        android:textSize="19sp"
+        android:textStyle="bold"
+         />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+
+        android:id="@+id/ivSelectedAvatar"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelPicture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+
+        app:srcCompat="@drawable/ic_person_pin_black_24dp"
+        />
+
 
 </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
